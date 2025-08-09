@@ -1,0 +1,293 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.App-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.App-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.App-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.App-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Start Section */
+.start-section {
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.camera-placeholder {
+  margin-bottom: 2rem;
+}
+
+.camera-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.camera-placeholder p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.start-button {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Camera Section */
+.camera-section {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  background: #000;
+}
+
+.webcam {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.camera-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.focus-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.camera-controls {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.capture-button, .cancel-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.capture-button {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+.capture-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4);
+}
+
+.cancel-button {
+  background: #6c757d;
+  color: white;
+  box-shadow: 0 10px 20px rgba(108, 117, 125, 0.3);
+}
+
+.cancel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(108, 117, 125, 0.4);
+}
+
+/* Result Section */
+.result-section {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.captured-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-controls {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  background: #f8f9fa;
+  flex-wrap: wrap;
+}
+
+.retake-button, .download-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.retake-button {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+.retake-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(40, 167, 69, 0.4);
+}
+
+.download-button {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.4);
+}
+
+/* Footer */
+.App-footer {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.App-footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-main {
+    padding: 1rem;
+  }
+  
+  .start-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .camera-controls, .image-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .capture-button, .cancel-button, .retake-button, .download-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .focus-frame {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 1rem;
+  }
+  
+  .App-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .start-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .camera-controls, .image-controls {
+    padding: 1.5rem 1rem;
+  }
+}
